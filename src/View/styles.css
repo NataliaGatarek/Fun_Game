@@ -1,0 +1,35 @@
+.firstCluster {
+  margin-top: 25px;
+}
+
+.header {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  margin: 0;
+  font-size: xx-large;
+}
+.sec-header {
+  font-family: "Courgette", cursive;
+  font-size: medium;
+  text-align: center;
+  margin: 0;
+}
+.new {
+  display: flex;
+  flex-direction: row;
+}
+.new:before,
+.new:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.new:before {
+  margin-right: 10px;
+  margin-left: 455px;
+}
+.new:after {
+  margin-left: 10px;
+  margin-right: 455px;
+}
