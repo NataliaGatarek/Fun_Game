@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../View/styles.css";
 import bats from "../Img/bats.jpg";
+import vampire from "../Img/vampire.jpg";
+import { findByLabelText } from "@testing-library/react";
 
 function Home() {
   const theAge = 476;
@@ -27,19 +29,24 @@ function Home() {
         <p className="header">Age of </p>
         <p className="sec-header new">of</p>
         <p className="header">The Vampire</p>
-        <div>
-          <img src={bats} alt="bats" />
+        <div className="home_flex">
+          {/* <div>
+            <img src={bats} alt="bats" />
+          </div> */}
+          <div className="new_flex">
+            <img src={vampire} alt="vampire" className="child_flex img" />
+            <input
+              type="number"
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
+            ></input>
+            <button onClick={onClick} type="submit" className="block">
+              Submit
+            </button>
+          </div>
         </div>
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-        ></input>
-        <button onClick={onClick} type="submit">
-          Submit
-        </button>
       </div>
     </React.Fragment>
   );
