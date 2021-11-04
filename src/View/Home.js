@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../View/styles.css";
+//import cx from "classnames";
 import bats from "../Img/bats.jpg";
 import vampire from "../Img/vampire.jpg";
-import { findByLabelText } from "@testing-library/react";
 
 function Home() {
   const theAge = 476;
@@ -13,11 +13,11 @@ function Home() {
     const playerGuess = value;
 
     if (playerGuess == theAge) {
-      setResult(console.log("correct"));
+      setResult("It is correct!");
     } else if (playerGuess >= theAge) {
-      setResult(console.log("too high"));
+      setResult("Too high!");
     } else if (playerGuess <= theAge) {
-      setResult(console.log("too low"));
+      setResult("Too low!");
     } else setResult("");
   };
 
@@ -27,7 +27,7 @@ function Home() {
     <React.Fragment>
       <div className="firstCluster">
         <p className="header">Age of </p>
-        <p className="sec-header new">of</p>
+        <p className="sec-header, new">of</p>
         <p className="header">The Vampire</p>
         <div className="home_flex">
           {/* <div>
